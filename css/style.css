@@ -1,0 +1,130 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-size: 32px;
+  color: hsl(212, 21%, 14%);
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.price {
+  color: hsl(158, 36%, 37%);
+  font-weight: 800;
+  font-size: 30px;
+  font-family: "Fraunces", serif;
+  position: relative;
+}
+
+.price::after {
+  content: "$169.99";
+  text-decoration: line-through;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 135px;
+}
+
+.strike-price {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 14px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 9px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #1a4031;
+  color: #fff;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .box {
+    height: initial;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+
+  .desktop-img {
+    display: none;
+  }
+}
